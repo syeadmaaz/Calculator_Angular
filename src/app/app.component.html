@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <mat-toolbar id="toolbar">
+    <mat-icon aria-hidden="false" aria-label="Example home icon" style="color:white; margin-left:20px" >home </mat-icon>
+    <div class="calspace">
+    <span style="color: white"> Calculator</span>
+    </div>
+  </mat-toolbar>
+  
+  <div class="main">
+    <div>
+      <div>
+        <mat-card style="border-radius:30px; margin:20px">
+          <div>
+            <div>
+              <p>Enter first value</p>
+
+              <input type="text" id="first" name="firstele" #firstele />
+            </div>
+            
+            <div>
+              <p>Enter second value</p>
+              <input type="text" id="second" name="secondele" #secondele />
+            </div>
+          </div>
+        </mat-card>
+
+        <div class="buttons">
+          <div>
+            <button (click)="Add(firstele.value, secondele.value)">
+              Addition
+            </button>
+          </div>
+          <div>
+            <button (click)="Sub(firstele.value, secondele.value)">
+              Subtract
+            </button>
+          </div>
+          <div>
+            <button (click)="Multiply(firstele.value, secondele.value)">
+              Multiply
+            </button>
+          </div>
+          <div>
+            <button (click)="Divide(firstele.value, secondele.value)">
+              Divide
+            </button>
+          </div>
+        </div>
+      </div>
+      <div>
+        <mat-card style="border-radius:30px; margin:20px">
+          <div>
+            <p>Enter value</p>
+            <input type="text" id="first" name="firstele" #Single_ele />
+          </div>
+        </mat-card>
+        <div class="buttons">
+          <div>
+            <button (click)="Fact(Single_ele.value)">Factorial</button>
+          </div>
+          <div>
+            <button (click)="Prime(Single_ele.value)">Prime</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div *ngIf="answer == 0; then thenBlock; else elseBlock"></div>
+      <ng-template #thenBlock> </ng-template>
+      <ng-template #elseBlock>
+        <h2>Answer is => {{ answer }}</h2>
+      </ng-template>
+    </div>
+    <div>
+      <div *ngIf="prime.length == 0; then thenBlock; else elsBlock"></div>
+      <ng-template #thenBlock> </ng-template>
+      <ng-template #elsBlock class="hi">
+        <h1>{{ prime }}</h1>
+      </ng-template>
+    </div>
+  </div>
+</html>
