@@ -4,7 +4,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Screenshot
 
-<img src="Screenshot/1.png" width="900px" height="500px">
+<img src="Screenshot/1.png" width="1100px" height="600px">
 
 ## Development server
 
